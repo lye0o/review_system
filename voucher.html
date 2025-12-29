@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+<meta charset="UTF-8">
+<title>Voucher Terima Kasih</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    text-align: center;
+    padding: 30px;
+}
+.card {
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    max-width: 380px;
+    margin: auto;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+.voucher {
+    border: 2px dashed #4CAF50;
+    padding: 20px;
+    margin-top: 20px;
+}
+.alert {
+    color: red;
+    font-weight: bold;
+    margin-top: 15px;
+}
+</style>
+</head>
+<body>
+
+<div class="card">
+    <h2>🎉 Terima Kasih!</h2>
+    <p>Sebagai tanda penghargaan, sila nikmati voucher ini</p>
+
+    <div class="voucher">
+        <h3>DISKAUN RM20 SERVIS RM100 KEATAS</h3>
+        <p id="date"></p>
+        <p>Tunjukkan kepada staff</p>
+    </div>
+
+    <p class="alert">
+        ⚠️ Voucher sah DIGUNAKAN PADA HARI INI SAHAJA
+    </p>
+</div>
+
+<script>
+const today = new Date();
+document.getElementById("date").innerHTML =
+    "📅 Sah pada: <b>" + today.toLocaleDateString("ms-MY") + "</b>";
+</script>
+
+</body>
+</html>
